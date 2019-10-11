@@ -139,4 +139,13 @@ class Character
 
         return $this;
     }
+
+    /**
+     * Convert the entity in an array
+     * @return array
+     */
+
+    public function toArray(){
+        return get_object_vars($this);
+    }
 }
