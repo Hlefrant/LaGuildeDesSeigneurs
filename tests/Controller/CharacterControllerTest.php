@@ -16,18 +16,26 @@ class CharacterControllerTest extends WebTestCase
 
     }
 
-    public function testBadIdentifier(){
-        $client = static ::createClient();
-        $client->request('GET', '/character/display/8f74f20597c5cf99dd42cd31331b7e6e2arre');
+//    public function testBadIdentifier(){
+//        $client = static ::createClient();
+//        $client->request('GET', '/character/display/8f74f20597c5cf99dd42cd31331b7e6e2arre');
+//
+//        $response = $client->getResponse();
+//        $this->assertBadJsonResponse($response);
+//    }
 
-        $response = $client->getResponse();
-        $this->assertBadJsonResponse($response);
+    public function testRedirectionIndex()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/character');
+
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
     }
 
     public function testIndex()
     {
         $client = static ::createClient();
-        $client->request('GET', '/character');
+        $client->request('GET', '/character/index');
 
         $response = $client->getResponse();
         $this->assertJsonResponse($response);
