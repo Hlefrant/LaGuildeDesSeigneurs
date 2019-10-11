@@ -14,9 +14,7 @@ class CharacterController extends AbstractController
      */
     public function index()
     {
-        return $this->render('character/index.html.twig', [
-            'controller_name' => 'CharacterController',
-        ]);
+        return $this->json(['path' => 'src/Controller/CharacterController.php']);
     }
 
     /**
@@ -27,7 +25,6 @@ class CharacterController extends AbstractController
     public function display(){
         $character = new Character();
         dump($character);
-        die;
 
         return new JsonResponse($character->toArray());
     }

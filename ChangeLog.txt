@@ -1,2 +1,8 @@
-v0.1 - Core files(10/10/19)
-v0.2 - Init Character(10/10/19)
+v0.2
+- Init Character(10/10/19)
+- Ajout Controller(11/10/10)
+- Ajout tests(11/10/10)
+
+v0.1
+- Core files(10/10/19)
+
