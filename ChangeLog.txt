@@ -1,3 +1,6 @@
+v0.2.1
+- Ajout champs
+
 v0.2
 - Init Character(10/10/19)
 - Ajout Controller(11/10/10)
