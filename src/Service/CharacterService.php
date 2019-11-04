@@ -63,4 +63,37 @@ class CharacterService implements CharacterServiceInterface
         endforeach;
         return $charactersFinal;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function modify(Character $character)
+    {
+        $character
+            ->setKind('Seigneur')
+            ->setName('Gorthol')
+            ->setSurname('Haume de terreur')
+            ->setCaste('Chevalier')
+            ->setKnowledge('Diplomatie')
+            ->setIntelligence(110)
+            ->setLife(13)
+            ->setImage('/images/maeglin.jpg')
+        ;
+
+        $this->em->persist($character);
+        $this->em->flush();
+
+        return $character;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function delete(Character $character)
+    {
+        $this->em->remove($character);
+        $this->em->flush();
+
+        return $character;
+    }
 }

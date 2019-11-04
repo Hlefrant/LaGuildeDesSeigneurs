@@ -1,6 +1,8 @@
 <?php
 namespace App\Service;
 
+use App\Entity\Character;
+
 interface CharacterServiceInterface
 {
     /**
@@ -8,4 +10,6 @@ interface CharacterServiceInterface
      */
 
     public function create();
+    public function modify(Character $character);
+    public function delete(Character $character);
 }
