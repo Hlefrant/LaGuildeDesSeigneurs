@@ -1,3 +1,6 @@
+v0.5
+- Player
+
 v0.4.3
 - Modify date
 
