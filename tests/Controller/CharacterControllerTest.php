@@ -6,12 +6,18 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class CharacterControllerTest extends WebTestCase
 {
+
+    private $client;
+
+    public function setUp(){
+        $this->client = static::createClient();
+    }
+
     public function testDisplay()
     {
-        $client = static ::createClient();
-        $client->request('GET', '/character/display/8f74f20597c5cf99dd42cd31331b7e6e2ae1fb45');
+        $this->client->request('GET', '/character/display/8f74f20597c5cf99dd42cd31331b7e6e2ae1fb45');
 
-        $response = $client->getResponse();
+        $response = $this->client->getResponse();
         $this->assertJsonResponse($response);
 
     }
@@ -26,18 +32,16 @@ class CharacterControllerTest extends WebTestCase
 
     public function testRedirectionIndex()
     {
-        $client = static::createClient();
-        $client->request('GET', '/character');
+        $this->client->request('GET', '/character');
 
-        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
     }
 
     public function testIndex()
     {
-        $client = static ::createClient();
-        $client->request('GET', '/character/index');
+        $this->client->request('GET', '/character/index');
 
-        $response = $client->getResponse();
+        $response = $this->client->getResponse();
         $this->assertJsonResponse($response);
 
     }

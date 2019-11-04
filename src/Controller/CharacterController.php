@@ -23,7 +23,7 @@ class CharacterController extends AbstractController
 
     /**
      * @Route("/character",
-     *     name="character_index",
+     *     name="character_redirect_index",
      *     methods={"GET", "HEAD"}
      *     )
      */
