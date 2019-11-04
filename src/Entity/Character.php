@@ -67,6 +67,12 @@ class Character
      */
     private $identifier;
 
+    /**
+     * @ORM\Column(type="datetime" )
+     */
+    private $Modification;
+    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -201,4 +207,17 @@ class Character
 
         return $this;
     }
+
+    public function getModification(): ?\DateTimeInterface
+    {
+        return $this->Modification;
+    }
+
+    public function setModification(\DateTimeInterface $Modification): self
+    {
+        $this->Modification = $Modification;
+
+        return $this;
+    }
+
 }

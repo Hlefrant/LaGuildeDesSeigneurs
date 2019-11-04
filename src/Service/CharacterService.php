@@ -78,6 +78,7 @@ class CharacterService implements CharacterServiceInterface
             ->setIntelligence(110)
             ->setLife(13)
             ->setImage('/images/maeglin.jpg')
+            ->setModification(new DateTime())
         ;
 
         $this->em->persist($character);
