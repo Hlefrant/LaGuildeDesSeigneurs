@@ -9,7 +9,32 @@ interface CharacterServiceInterface
      * Creates the character
      */
 
-    public function create();
-    public function modify(Character $character);
+    public function create(string $data);
+
+    /**
+     * @param Character $character
+     * @return mixed
+     */
+    public function modify(Character $character, string $data);
+
+    /**
+     * @param Character $character
+     * @return mixed
+     */
     public function delete(Character $character);
+
+
+    /**
+     * @param Character $character
+     * @return mixed
+     */
+    public function isEntityFilled(Character $character);
+
+    /**
+     * @param Character $character
+     * @param $formName
+     * @param $data
+     * @return mixed
+     */
+    public function submit(Character $character, $formName, $data);
 }

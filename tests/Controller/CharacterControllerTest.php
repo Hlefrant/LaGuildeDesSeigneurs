@@ -41,9 +41,15 @@ class CharacterControllerTest extends WebTestCase
 
     public function testCreate()
     {
-        $this->client->request('POST', '/character/create');
+        $this->client->request(
+            'POST',
+            '/character/create',
+            array(),
+            array(),
+            array('CONTENT_TYPE' => 'application/json'),
+            '{"kind":"Dame","name":"Eldalótë","surname":"Fleur elfique","caste":"Elfe","knowledge":"Arts","intelligence":120,"life":12,"image":"/images/eldalote.jpg"}'
+        );
         $this->assertJsonResponse($this->client->getResponse(), 200);
-
         $this->assertIdentifier();
         $this->defineIdentifier();
     }
@@ -92,8 +98,31 @@ class CharacterControllerTest extends WebTestCase
      */
     public function testModify()
     {
-        $this->client->request('PUT', '/character/modify/' . self::$identifier);
+        $this->client->request(
+            'PUT',
+            '/character/modify/' . self::$identifier,
+            array(),
+            array(),
+            array('CONTENT_TYPE' => 'application/json'),
+            '{"kind":"Seigneur", "name":"Gorthol"}'
+        );
+
         $this->assertJsonResponse($this->client->getResponse(), 200);
+        $this->assertIdentifier();
+
+        $this->client->request(
+            'PUT',
+            '/character/modify/' . self::$identifier,
+            array(),
+            array(),
+            array('CONTENT_TYPE' => 'application/json'),
+            '{"kind":"Dame","name":"Eldalótë","surname":"Fleur elfique","caste":"Elfe","knowledge":"Arts","intelligence":120,"life":12,"image":"/images/eldalote.jpg"}'
+        );
+
+        $this->assertJsonResponse($this->client->getResponse(), 200);
+        $this->assertIdentifier();
+
+
     }
 
     /**

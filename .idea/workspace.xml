@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a8a6de-4ca6-4caa-aa56-1ce8686dc102" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/PlayerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191104124335.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/PlayerRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/Voter/PlayerVoter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/PlayerService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/PlayerServiceInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChangeLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ChangeLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CharacterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CharacterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CharacterService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CharacterService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CharacterServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CharacterServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/PlayerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PlayerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/PlayerServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PlayerServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,32 +28,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ChangeLog.txt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Player.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="-1475">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CharacterController.php">
+        <entry file="file://$PROJECT_DIR$/src/Service/CharacterServiceInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+            <state relative-caret-position="285">
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Service/PlayerServiceInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/PlayerType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding>
-                <element signature="e#34#59#0#PHP" expanded="true" />
+                <element signature="e#28#50#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Service/CharacterService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="106" column="42" selection-start-line="105" selection-start-column="8" selection-end-line="106" selection-end-column="42" />
+              <folding>
+                <element signature="e#30#55#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/PlayerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-307">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="628">
+              <caret line="92" column="55" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
               <folding>
                 <element signature="e#35#57#0#PHP" expanded="true" />
               </folding>
@@ -61,21 +92,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Player.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CharacterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Service/CharacterService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+            <state relative-caret-position="606">
+              <caret line="91" column="87" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="87" />
               <folding>
-                <element signature="e#30#55#0#PHP" expanded="true" />
+                <element signature="e#34#59#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,29 +106,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Service/PlayerService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="-138">
+              <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
               <folding>
-                <element signature="e#33#55#0#PHP" expanded="true" />
+                <element signature="e#33#58#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Character.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="194" column="3" selection-start-line="194" selection-start-column="3" selection-end-line="197" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Security/Voter/PlayerVoter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-922">
-              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -114,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="103" column="78" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="78" />
+            <state relative-caret-position="470">
+              <caret line="49" column="100" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -123,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="22" column="71" selection-end-line="107" />
+            <state relative-caret-position="1500">
+              <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="122" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -134,9 +138,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>character</find>
-      <find>chara</find>
       <find>cha</find>
+      <find>$character</find>
+      <find>chara</find>
     </findStrings>
+    <replaceStrings>
+      <replace>$player</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,20 +156,22 @@
         <option value="$PROJECT_DIR$/src/Interface/CharacterServiceInterface.php" />
         <option value="$PROJECT_DIR$/src/Interface/CharacterService.php" />
         <option value="$PROJECT_DIR$/.env.test.local" />
-        <option value="$PROJECT_DIR$/src/Service/CharacterServiceInterface.php" />
         <option value="$PROJECT_DIR$/src/Security/Voter/CharacterVoter.php" />
-        <option value="$PROJECT_DIR$/src/Controller/CharacterController.php" />
-        <option value="$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php" />
-        <option value="$PROJECT_DIR$/src/Service/CharacterService.php" />
         <option value="$PROJECT_DIR$/src/Entity/Character.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20191104121303.php" />
-        <option value="$PROJECT_DIR$/src/Service/PlayerServiceInterface.php" />
-        <option value="$PROJECT_DIR$/src/Controller/PlayerController.php" />
         <option value="$PROJECT_DIR$/src/Security/Voter/PlayerVoter.php" />
-        <option value="$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Player.php" />
-        <option value="$PROJECT_DIR$/src/Service/PlayerService.php" />
         <option value="$PROJECT_DIR$/ChangeLog.txt" />
+        <option value="$PROJECT_DIR$/src/Entity/Player.php" />
+        <option value="$PROJECT_DIR$/src/Form/CharacterType.php" />
+        <option value="$PROJECT_DIR$/src/Form/PlayerType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CharacterController.php" />
+        <option value="$PROJECT_DIR$/src/Service/CharacterServiceInterface.php" />
+        <option value="$PROJECT_DIR$/src/Service/CharacterService.php" />
+        <option value="$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/Service/PlayerServiceInterface.php" />
+        <option value="$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/Service/PlayerService.php" />
+        <option value="$PROJECT_DIR$/src/Controller/PlayerController.php" />
       </list>
     </option>
   </component>
@@ -325,6 +335,12 @@
               <item name="LaGuildeDesSeigneurs" type="b2602c69:ProjectViewProjectNode" />
               <item name="LaGuildeDesSeigneurs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaGuildeDesSeigneurs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LaGuildeDesSeigneurs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -386,18 +402,18 @@
       <updated>1570717640281</updated>
       <workItem from="1570717642759" duration="404000" />
       <workItem from="1570775660212" duration="16199000" />
-      <workItem from="1572856774644" duration="10225000" />
+      <workItem from="1572856774644" duration="16238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26828000" />
+    <option name="totallyTimeSpent" value="32841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13741064" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13741064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -410,7 +426,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32931727" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32931727" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -506,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/CharacterServiceInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Security/Voter/CharacterVoter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -523,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/PlayerServiceInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Security/Voter/PlayerVoter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-922">
@@ -537,78 +539,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php">
+    <entry file="file://$PROJECT_DIR$/ChangeLog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="22" column="71" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlayerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#35#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CharacterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-          <folding>
-            <element signature="e#34#59#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Character.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="194" column="3" selection-start-line="194" selection-start-column="3" selection-end-line="197" />
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php">
+    <entry file="file://$PROJECT_DIR$/src/Form/CharacterType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="103" column="78" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="78" />
+        <state relative-caret-position="375">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="49" />
+          <folding>
+            <element signature="e#28#53#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Player.php">
+    <entry file="file://$PROJECT_DIR$/tests/Controller/CharacterControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        <state relative-caret-position="1500">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="122" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/CharacterServiceInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/PlayerServiceInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/CharacterService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+        <state relative-caret-position="461">
+          <caret line="106" column="42" selection-start-line="105" selection-start-column="8" selection-end-line="106" selection-end-column="42" />
           <folding>
             <element signature="e#30#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/PlayerService.php">
+    <entry file="file://$PROJECT_DIR$/src/Form/PlayerType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="465">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
           <folding>
-            <element signature="e#33#55#0#PHP" expanded="true" />
+            <element signature="e#28#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChangeLog.txt">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Player.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="-1475">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Controller/PlayerControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="49" column="100" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CharacterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="91" column="87" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="87" />
+          <folding>
+            <element signature="e#34#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/PlayerService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+          <folding>
+            <element signature="e#33#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PlayerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="92" column="55" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
+          <folding>
+            <element signature="e#35#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
