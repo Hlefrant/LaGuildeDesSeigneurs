@@ -15,13 +15,13 @@ class PlayerType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstname',TextType::class)
-            ->add('lastname',TextType::class)
-            ->add('email',TextType::class)
-            ->add('mirian',IntegerType::class)
+            ->add('firstname', TextType::class)
+            ->add('lastname', TextType::class)
+            ->add('email', TextType::class)
+            ->add('mirian', IntegerType::class)
             ->add('creation', DateTimeType::class)
             ->add('modification', DateTimeType::class)
-            ->add('identifier',TextType::class)
+            ->add('identifier', TextType::class)
         ;
     }
 

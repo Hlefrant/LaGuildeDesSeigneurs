@@ -31,8 +31,7 @@ class CharacterVoter extends Voter
      */
     protected function supports($attribute, $subject)
     {
-
-        if (null !== $subject){
+        if (null !== $subject) {
             return $subject instanceof Character && in_array($attribute, self::ATTRIBUTES);
         }
         // replace with your own logic
@@ -83,8 +82,7 @@ class CharacterVoter extends Voter
     }
 
     /**
-     * @param $token
-     * @param $subject
+     *
      * @return bool
      */
 

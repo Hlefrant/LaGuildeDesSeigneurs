@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Service;
+
 use App\Entity\Character;
 use App\Repository\CharacterRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -11,24 +12,23 @@ use App\Form\CharacterType;
 use DateTime;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-
 class CharacterService implements CharacterServiceInterface
 {
     private $characterRepository;
     private $em;
     private $validator;
+    private $formFactory;
 
     /**
      * CharacterService constructor.
-     * @param $em
+     *
      */
     public function __construct(
         CharacterRepository $characterRepository,
         EntityManagerInterface $em,
         FormFactoryInterface $formFactory,
-        ValidatorInterface $validator)
-
-    {
+        ValidatorInterface $validator
+    ) {
         $this->characterRepository = $characterRepository;
         $this->em = $em;
         $this->formFactory = $formFactory;

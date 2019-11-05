@@ -10,14 +10,13 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Service\CharacterServiceInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Entity;
 
-
 class CharacterController extends AbstractController
 {
     private $characterService;
 
     /**
      * CharacterController constructor.
-     * @param $characterService
+     *
      */
     public function __construct(CharacterServiceInterface $characterService)
     {
