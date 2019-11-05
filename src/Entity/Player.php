@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="player")
@@ -19,21 +20,37 @@ class Player
 
     /**
      * @ORM\Column(type="string", length=16)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 3,
+     *     max = 16,
+     *)
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=64)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 3,
+     *     max = 16,
+     *)
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=64)
+     * @Assert\NotBlank
+     * @Assert\Email
      */
     private $email;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Type(
+     *     type="integer",
+     *     message="The value {{ value }} is not a valid {{ type }}."
+     * )
      */
     private $mirian;
 
@@ -49,6 +66,10 @@ class Player
 
     /**
      * @ORM\Column(type="string", length=40)
+     * @Assert\Length(
+     *     min = 40,
+     *     max = 40,
+     *)
      */
     private $identifier;
 

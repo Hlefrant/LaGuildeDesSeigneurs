@@ -1,3 +1,6 @@
+v0.5.1
+- Validation Forms
+
 v0.5
 - Player    
 
