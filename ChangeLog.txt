@@ -1,3 +1,6 @@
+v0.6.1
+- Code propre
+
 v0.6.0
 - Relation characters player
 

@@ -82,8 +82,7 @@ class PlayerVoter extends Voter
     }
 
     /**
-     * @param $token
-     * @param $subject
+     *
      * @return bool
      */
 

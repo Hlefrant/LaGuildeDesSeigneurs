@@ -19,10 +19,10 @@ class PlayerService implements PlayerServiceInterface
     private $playerRepository;
     private $em;
     private $validator;
+    private $formFactory;
 
     /**
      * PlayerService constructor.
-     * @param $em
      */
     public function __construct(
         PlayerRepository $playerRepository,

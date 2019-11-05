@@ -16,7 +16,7 @@ class PlayerController extends AbstractController
 
     /**
      * PlayerController constructor.
-     * @param $playerService
+     *
      */
     public function __construct(PlayerServiceInterface $playerService)
     {

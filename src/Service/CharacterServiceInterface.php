@@ -32,8 +32,6 @@ interface CharacterServiceInterface
 
     /**
      * @param Character $character
-     * @param $formName
-     * @param $data
      * @return mixed
      */
     public function submit(Character $character, $formName, $data);

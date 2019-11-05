@@ -82,8 +82,7 @@ class CharacterVoter extends Voter
     }
 
     /**
-     * @param $token
-     * @param $subject
+     *
      * @return bool
      */
 

@@ -16,7 +16,7 @@ class CharacterController extends AbstractController
 
     /**
      * CharacterController constructor.
-     * @param $characterService
+     *
      */
     public function __construct(CharacterServiceInterface $characterService)
     {

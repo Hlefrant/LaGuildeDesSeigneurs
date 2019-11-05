@@ -17,10 +17,11 @@ class CharacterService implements CharacterServiceInterface
     private $characterRepository;
     private $em;
     private $validator;
+    private $formFactory;
 
     /**
      * CharacterService constructor.
-     * @param $em
+     *
      */
     public function __construct(
         CharacterRepository $characterRepository,
