@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+v0.6.0git mer
+=======
 v0.6.1
 - Code propre
 
 v0.6.0
+>>>>>>> dev
 - Relation characters player
 
 v0.5.1
