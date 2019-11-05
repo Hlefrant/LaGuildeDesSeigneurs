@@ -3,7 +3,6 @@
 
 namespace App\Service;
 
-
 use App\Entity\Character;
 use App\Entity\Player;
 use App\Form\PlayerType;
@@ -14,7 +13,6 @@ use LogicException;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-
 
 class PlayerService implements PlayerServiceInterface
 {
@@ -30,9 +28,8 @@ class PlayerService implements PlayerServiceInterface
         PlayerRepository $playerRepository,
         EntityManagerInterface $em,
         FormFactoryInterface $formFactory,
-        ValidatorInterface $validator)
-
-    {
+        ValidatorInterface $validator
+    ) {
         $this->playerRepository = $playerRepository;
         $this->em = $em;
         $this->formFactory = $formFactory;
@@ -58,10 +55,6 @@ class PlayerService implements PlayerServiceInterface
         $this->em->persist($player);
         $this->em->flush();
         return $player;
-
-
-
-
     }
 
     /**

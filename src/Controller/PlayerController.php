@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Player;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -91,8 +90,10 @@ class PlayerController extends AbstractController
     public function modify(Player $player, Request $request)
     {
         $this->denyAccessUnlessGranted('playerModify', $player);
-        $player = $this->playerService->modify($player,
-            $request->getContent());
+        $player = $this->playerService->modify(
+            $player,
+            $request->getContent()
+        );
         return new JsonResponse($player->toArray());
     }
 

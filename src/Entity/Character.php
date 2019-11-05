@@ -237,20 +237,20 @@ class Character
      * @return array
      */
 
-    public function toArray(bool $expand = true){
+    public function toArray(bool $expand = true)
+    {
         $character =  get_object_vars($this);
 
-        if (null !== $character['creation']){
+        if (null !== $character['creation']) {
             $character['creation'] = $character['creation']->format('Y-m-d H:i:s');
         }
 
-        if (null !== $character['Modification']){
+        if (null !== $character['Modification']) {
             $character['Modification'] = $character['Modification']->format('Y-m-d H:i:s');
         }
 
-        if ($expand && null !== $this->getPlayer()){
-             $character['player'] = $this->getPlayer()->toArray(false);
-
+        if ($expand && null !== $this->getPlayer()) {
+            $character['player'] = $this->getPlayer()->toArray(false);
         }
         return $character;
     }
@@ -290,5 +290,4 @@ class Character
 
         return $this;
     }
-
 }
