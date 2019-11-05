@@ -9,6 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\PlayerServiceInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Entity;
 
 class PlayerController extends AbstractController
 {
@@ -54,7 +55,7 @@ class PlayerController extends AbstractController
      *     name="player_display",
      *     requirements={"identifier": "^([a-z0-9]{40})$"},
      *     methods={"GET", "HEAD"})
-     * @return JsonResponse
+     * @Entity("player", expr="repository.findOneByIdentifier(identifier)")
      */
 
     public function display(Player $player)
@@ -90,7 +91,8 @@ class PlayerController extends AbstractController
     public function modify(Player $player, Request $request)
     {
         $this->denyAccessUnlessGranted('playerModify', $player);
-        $player = $this->playerService->modify($player, $request->getContent());
+        $player = $this->playerService->modify($player,
+            $request->getContent());
         return new JsonResponse($player->toArray());
     }
 

@@ -1,3 +1,6 @@
+v0.6.0
+- Relation characters player
+
 v0.5.1
 - Validation Forms
 

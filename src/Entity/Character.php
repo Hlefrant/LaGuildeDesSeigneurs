@@ -110,6 +110,12 @@ class Character
      * @ORM\Column(type="datetime" )
      */
     private $Modification;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Player", inversedBy="characters")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $player;
     
 
     public function getId(): ?int
@@ -231,8 +237,22 @@ class Character
      * @return array
      */
 
-    public function toArray(){
-        return get_object_vars($this);
+    public function toArray(bool $expand = true){
+        $character =  get_object_vars($this);
+
+        if (null !== $character['creation']){
+            $character['creation'] = $character['creation']->format('Y-m-d H:i:s');
+        }
+
+        if (null !== $character['Modification']){
+            $character['Modification'] = $character['Modification']->format('Y-m-d H:i:s');
+        }
+
+        if ($expand && null !== $this->getPlayer()){
+             $character['player'] = $this->getPlayer()->toArray(false);
+
+        }
+        return $character;
     }
 
     public function getIdentifier(): ?string
@@ -255,6 +275,18 @@ class Character
     public function setModification(\DateTimeInterface $Modification): self
     {
         $this->Modification = $Modification;
+
+        return $this;
+    }
+
+    public function getPlayer(): ?Player
+    {
+        return $this->player;
+    }
+
+    public function setPlayer(?Player $player): self
+    {
+        $this->player = $player;
 
         return $this;
     }
