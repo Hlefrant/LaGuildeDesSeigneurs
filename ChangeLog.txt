@@ -1,4 +1,7 @@
-v0.7.1
+v0.7.3
+- getAllByIntelligence
+
+v0.7.2
 - Style forms
 
 v0.7
@@ -43,3 +46,4 @@ v0.2
 v0.1
 - Core files(10/10/19)
 
+Je veux avoir la liste api + html de tous les caractères dont le niveau d'intelligence est supérieur ou égal à un nombre passé dans l'url

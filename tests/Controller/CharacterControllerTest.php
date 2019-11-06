@@ -63,6 +63,9 @@ class CharacterControllerTest extends WebTestCase
 
     }
 
+    /**
+     * Test bad identifier
+     */
     public function testBadIdentifier(){
         $client = static ::createClient();
         $client->request('GET', '/character/display/8f74f20597c5cf99dd42cd31331b7e6e2arre');
@@ -71,6 +74,9 @@ class CharacterControllerTest extends WebTestCase
         $this->assertBadJsonResponse($response);
     }
 
+    /**
+     * Test To redirect to index
+     */
     public function testRedirectionIndex()
     {
         $this->client->request('GET', '/character');
@@ -78,9 +84,24 @@ class CharacterControllerTest extends WebTestCase
         $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
     }
 
+    /**
+     * Test display all
+     */
     public function testIndex()
     {
         $this->client->request('GET', '/character/index');
+
+        $response = $this->client->getResponse();
+        $this->assertJsonResponse($response);
+
+    }
+
+    /**
+     * Test display all characters by intelligence
+     */
+    public function testIndexIntelligence()
+    {
+        $this->client->request('GET', '/character/index/50');
 
         $response = $this->client->getResponse();
         $this->assertJsonResponse($response);

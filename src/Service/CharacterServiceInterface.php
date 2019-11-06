@@ -45,4 +45,14 @@ interface CharacterServiceInterface
      * Modifies the character from html form
      */
     public function modifyFromHtml(Character $character);
+
+    /**
+     * Get all Characters
+     */
+    public function getAll();
+
+    /**
+     * Get all Characters by intelligence
+     */
+    public function getAllByIntelligence(int $intelligence);
 }

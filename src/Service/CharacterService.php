@@ -36,23 +36,6 @@ class CharacterService implements CharacterServiceInterface
     }
 
 
-    /**
-     * {@inheritdoc}
-     */
-//    public function create(string $data)
-//    {
-//        $character = new Character();
-//        $character
-//            ->setIdentifier(hash('sha1', uniqid()))
-//            ->setCreation(new DateTime())
-//            ->setModification(new DateTime())
-//        ;
-//        $this->submit($character, CharacterType::class, $data);
-//        $this->isEntityFilled($character);
-//        $this->em->persist($character);
-//        $this->em->flush();
-//        return $character;
-//    }
 
     /**
      * {@inheritdoc}
@@ -93,7 +76,7 @@ class CharacterService implements CharacterServiceInterface
         $charactersFinal = array();
         $characters = $this->characterRepository->findAll();
         foreach ($characters as $character) :
-            $charactersFinal[] = $character->toArray();
+                $charactersFinal[] = $character->toArray();
         endforeach;
         return $charactersFinal;
     }
@@ -101,19 +84,17 @@ class CharacterService implements CharacterServiceInterface
     /**
      * {@inheritdoc}
      */
-//    public function modify(Character $character, string $data)
-//    {
-//        $data = $this->submit($character, CharacterType::class, $data);
-//        $this->isEntityFilled($character);
-//        $character
-//            ->setModification(new DateTime())
-//        ;
-//
-//        $this->em->persist($character);
-//        $this->em->flush();
-//
-//        return $character;
-//    }
+    public function getAllByIntelligence(int $intelligence)
+    {
+        $charactersFinal = array();
+        $characters = $this->characterRepository->findAll();
+        foreach ($characters as $character) :
+                if ($character->getIntelligence() >= $intelligence) {
+                    $charactersFinal[] = $character->toArray();
+                }
+        endforeach;
+        return $charactersFinal;
+    }
 
     /**
      * {@inheritdoc}
@@ -161,7 +142,7 @@ class CharacterService implements CharacterServiceInterface
         return $character;
     }
 
-//ET MODIFIER LES 2 SUIVANTES POUR RESPECTER LE DRY
+    //ET MODIFIER LES 2 SUIVANTES POUR RESPECTER LE DRY
     /**
      * {@inheritdoc}
      */

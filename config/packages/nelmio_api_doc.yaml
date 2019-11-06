@@ -3,8 +3,8 @@ nelmio_api_doc:
         host: localhost
         schemes: [http]
         info:
-            title: My App
-            description: This is an awesome app!
+            title: Documentation API Characters
+            description: C'est vraiment la meilleure API !
             version: '0.6.1'
     areas: # to filter documented areas
         path_patterns:

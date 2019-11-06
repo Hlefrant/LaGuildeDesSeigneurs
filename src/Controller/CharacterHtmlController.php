@@ -38,6 +38,24 @@ class CharacterHtmlController extends AbstractController
         ]);
     }
 
+    //INDEX INTELLIGENCE
+    /**
+     * Displays available Characters in html
+     *
+     * @Route("/character/intelligence/{intelligence}/index.html/",
+     *     name="character_index_html",
+     *     methods={"GET", "HEAD"}
+     * )
+     */
+    public function indexIntelligence($intelligence): Response
+    {
+        $this->denyAccessUnlessGranted('characterIndexIntelligence', null);
+
+        return $this->render('character/index.html.twig', [
+            'characters' => $this->characterService->getAllByIntelligence($intelligence),
+        ]);
+    }
+
     //CREATE
     /**
      * Creates the Character

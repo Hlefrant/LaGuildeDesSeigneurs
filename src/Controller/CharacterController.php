@@ -75,6 +75,36 @@ class CharacterController extends AbstractController
     }
 
     /**
+     * Displays available Characters by intelligence
+     *
+     * @Route("/character/index/{intelligence}",
+     *     name="character_index_intelligence",
+     *     methods={"GET", "HEAD"}
+     *     )
+     *
+     * @SWG\Response(
+     *     response=200,
+     *     description="Success",
+     *     @SWG\Schema(
+     *      type="array",
+     *      @SWG\Items(ref=@Model(type=Character::class))
+     *      )
+     * )
+     * @SWG\Response(
+     *     response=403,
+     *     description="Access denied"
+     * )
+     * @SWG\Tag(name="Character")
+     */
+    public function indexIntelligence($intelligence)
+    {
+        $this->denyAccessUnlessGranted('characterIndexIntelligence', null);
+        $characters = $this->characterService->getAllByIntelligence($intelligence);
+
+        return new JsonResponse($characters);
+    }
+
+    /**
      * Display character
      *
      * @Route("/character/display/{identifier}",
