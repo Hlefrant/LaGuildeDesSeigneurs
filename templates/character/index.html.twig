@@ -1,14 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Character index{% endblock %}
+{% block title %}Listes des personnages{% endblock %}
 
 {% block body %}
-    <h1>Character index</h1>
+    <h1>Listes des personnages</h1>
 
-    <table class="table">
+
+{# Entête du tableau #}
+    <table class="table text-center table-hover">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Kind</th>
                 <th>Name</th>
                 <th>Surname</th>
@@ -16,31 +17,31 @@
                 <th>Knowledge</th>
                 <th>Intelligence</th>
                 <th>Life</th>
-                <th>Image</th>
-                <th>Identifier</th>
                 <th>Creation</th>
                 <th>Modification</th>
                 <th>actions</th>
             </tr>
         </thead>
+
         <tbody>
         {% for character in characters %}
+{# Valuers d'un personnage #}
             <tr>
-                <td>{{ character.id }}</td>
-                <td>{{ character.kind }}</td>
-                <td>{{ character.name }}</td>
+                {% if character.kind == "Dame" %}
+                        <td><strong>{{ character.kind }}</strong></td>
+                {% else %}
+                    <td>{{ character.kind }}</td>
+                {% endif %}
+                <td><a href="{{ path('character_display_html', {'identifier': character.identifier}) }}"> {{ character.name }}</a></td>
                 <td>{{ character.surname }}</td>
                 <td>{{ character.caste }}</td>
                 <td>{{ character.knowledge }}</td>
                 <td>{{ character.intelligence }}</td>
                 <td>{{ character.life }}</td>
-                <td>{{ character.image }}</td>
-                <td>{{ character.identifier }}</td>
-                <td>{{ character.creation ? character.creation|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ character.Modification ? character.Modification|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ character.creation ? character.creation|date('d-m-Y') : '' }}</td>
+                <td>{{ character.Modification ? character.Modification|date('d-m-Y') : '' }}</td>
                 <td>
-                    <a href="{{ path('character_display_html', {'identifier': character.identifier}) }}">show</a>
-                    <a href="{{ path('character_modify_html', {'identifier': character.identifier}) }}">edit</a>
+                    <a href="{{ path('character_modify_html', {'identifier': character.identifier}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -51,5 +52,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('character_create_html') }}">Create new</a>
+    <a class="d-flex w-20 justify-content-center" href="{{ path('character_create_html') }}">Nouveau Personnage</a>
 {% endblock %}

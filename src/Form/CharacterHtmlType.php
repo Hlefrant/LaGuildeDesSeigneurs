@@ -20,12 +20,20 @@ class CharacterHtmlType extends AbstractType
             ->add('surname', TextType::class)
             ->add('caste', TextType::class, array(
                 'required' => false,
+                'help' => 'Caste du personnage',
             ))
             ->add('knowledge', TextType::class, array(
                 'required' => false,
+                'help' => 'Knowledge du personnage',
             ))
             ->add('intelligence', IntegerType::class, array(
                 'required' => false,
+                'help' => "Intelligence du personnage",
+                'attr' => array(
+                    'min' => 1,
+                    'max' =>250,
+                    'placeholder' => "Niveau d'intelligence du personnage"
+                )
             ))
             ->add('life', IntegerType::class, array(
                 'required' => false,
