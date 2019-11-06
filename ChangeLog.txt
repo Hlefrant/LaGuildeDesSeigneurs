@@ -1,5 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+v0.7
+- Documentation
+
+=======
+<<<<<<< HEAD
+v0.6.0git mer
+=======
+>>>>>>> 5af0620b6b29f18a7f1787d1353fa0b4a52e6479
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 v0.6.0git mer
 =======
 =======
@@ -7,6 +18,7 @@ v0.7
 - Documentation
 
 >>>>>>> dev
+>>>>>>> master
 v0.6.1
 - Code propre
 

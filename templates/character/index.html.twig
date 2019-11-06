@@ -1,20 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CharacterController!{% endblock %}
+{% block title %}Character index{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Character index</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Kind</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Caste</th>
+                <th>Knowledge</th>
+                <th>Intelligence</th>
+                <th>Life</th>
+                <th>Image</th>
+                <th>Identifier</th>
+                <th>Creation</th>
+                <th>Modification</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for character in characters %}
+            <tr>
+                <td>{{ character.id }}</td>
+                <td>{{ character.kind }}</td>
+                <td>{{ character.name }}</td>
+                <td>{{ character.surname }}</td>
+                <td>{{ character.caste }}</td>
+                <td>{{ character.knowledge }}</td>
+                <td>{{ character.intelligence }}</td>
+                <td>{{ character.life }}</td>
+                <td>{{ character.image }}</td>
+                <td>{{ character.identifier }}</td>
+                <td>{{ character.creation ? character.creation|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ character.Modification ? character.Modification|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('character_display_html', {'identifier': character.identifier}) }}">show</a>
+                    <a href="{{ path('character_modify_html', {'identifier': character.identifier}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/LaGuildeDesSeigneurs/src/Controller/CharacterController.php'|file_link(0) }}">src/Controller/CharacterController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/LaGuildeDesSeigneurs/templates/character/index.html.twig'|file_link(0) }}">templates/character/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <a href="{{ path('character_create_html') }}">Create new</a>
 {% endblock %}

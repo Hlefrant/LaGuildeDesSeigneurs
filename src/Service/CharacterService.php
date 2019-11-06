@@ -39,20 +39,20 @@ class CharacterService implements CharacterServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function create(string $data)
-    {
-        $character = new Character();
-        $character
-            ->setIdentifier(hash('sha1', uniqid()))
-            ->setCreation(new DateTime())
-            ->setModification(new DateTime())
-        ;
-        $this->submit($character, CharacterType::class, $data);
-        $this->isEntityFilled($character);
-        $this->em->persist($character);
-        $this->em->flush();
-        return $character;
-    }
+//    public function create(string $data)
+//    {
+//        $character = new Character();
+//        $character
+//            ->setIdentifier(hash('sha1', uniqid()))
+//            ->setCreation(new DateTime())
+//            ->setModification(new DateTime())
+//        ;
+//        $this->submit($character, CharacterType::class, $data);
+//        $this->isEntityFilled($character);
+//        $this->em->persist($character);
+//        $this->em->flush();
+//        return $character;
+//    }
 
     /**
      * {@inheritdoc}
@@ -101,9 +101,54 @@ class CharacterService implements CharacterServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function modify(Character $character, string $data)
+//    public function modify(Character $character, string $data)
+//    {
+//        $data = $this->submit($character, CharacterType::class, $data);
+//        $this->isEntityFilled($character);
+//        $character
+//            ->setModification(new DateTime())
+//        ;
+//
+//        $this->em->persist($character);
+//        $this->em->flush();
+//
+//        return $character;
+//    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function delete(Character $character)
     {
-        $data = $this->submit($character, CharacterType::class, $data);
+        $this->em->remove($character);
+        $this->em->flush();
+
+        return $character;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function createFromHtml(Character $character)
+    {
+        $character
+            ->setIdentifier(hash('sha1', uniqid()))
+            ->setCreation(new DateTime())
+            ->setModification(new DateTime())
+        ;
+        $this->isEntityFilled($character);
+
+        $this->em->persist($character);
+        $this->em->flush();
+
+        return $character;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function modifyFromHtml(Character $character)
+    {
         $this->isEntityFilled($character);
         $character
             ->setModification(new DateTime())
@@ -115,14 +160,25 @@ class CharacterService implements CharacterServiceInterface
         return $character;
     }
 
+//ET MODIFIER LES 2 SUIVANTES POUR RESPECTER LE DRY
     /**
      * {@inheritdoc}
      */
-    public function delete(Character $character)
+    public function modify(Character $character, string $data)
     {
-        $this->em->remove($character);
-        $this->em->flush();
+        $data = $this->submit($character, CharacterType::class, $data);
 
-        return $character;
+        return $this->modifyFromHtml($character);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function create(string $data)
+    {
+        $character = new Character();
+        $this->submit($character, CharacterType::class, $data);
+
+        return $this->createFromHtml(($character));
     }
 }
