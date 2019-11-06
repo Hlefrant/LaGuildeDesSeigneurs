@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\CharacterServiceInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Entity;
+use Nelmio\ApiDocBundle\Annotation\Model;
+use Swagger\Annotations as SWG;
 
 class CharacterController extends AbstractController
 {
@@ -24,10 +26,17 @@ class CharacterController extends AbstractController
     }
 
     /**
+     * Redirect to index route
+     *
      * @Route("/character",
      *     name="character_redirect_index",
      *     methods={"GET", "HEAD"}
      *     )
+     * @SWG\Response(
+     *     response=302,
+     *     description="Redirect",
+     * )
+     * @SWG\Tag(name="Character")
      */
     public function redirectIndex()
     {
@@ -36,10 +45,26 @@ class CharacterController extends AbstractController
 
 
     /**
+     * Displays available Characters
+     *
      * @Route("/character/index",
      *     name="character_index",
      *     methods={"GET", "HEAD"}
      *     )
+     *
+     * @SWG\Response(
+     *     response=200,
+     *     description="Success",
+     *     @SWG\Schema(
+     *      type="array",
+     *      @SWG\Items(ref=@Model(type=Character::class))
+     *      )
+     * )
+     * @SWG\Response(
+     *     response=403,
+     *     description="Access denied"
+     * )
+     * @SWG\Tag(name="Character")
      */
     public function index()
     {
@@ -50,11 +75,28 @@ class CharacterController extends AbstractController
     }
 
     /**
+     * Display character
+     *
      * @Route("/character/display/{identifier}",
      *     name="character_display",
      *     requirements={"identifier": "^([a-z0-9]{40})$"},
      *     methods={"GET", "HEAD"})
      * @Entity("character", expr="repository.findOneByIdentifier(identifier)")
+     *
+     * @SWG\Response(
+     *     response=200,
+     *     description="Success",
+     * @Model(type=Character::class)
+     * )
+     * @SWG\Response(
+     *     response=403,
+     *     description="Access denied"
+     * )
+     * @SWG\Response(
+     *     response=404,
+     *     description="Not found"
+     * )
+     * @SWG\Tag(name="Character")
      */
 
     public function display(Character $character)
@@ -66,10 +108,29 @@ class CharacterController extends AbstractController
 
     //CREATE
     /**
+     * Create character
+     *
      * @Route("/character/create",
      *     name="character_create",
      *     methods={"POST","HEAD"}
      *     )
+     * @SWG\Response(
+     *     response=200,
+     *     description="Success",
+     * @Model(type=Character::class)
+     * )
+     * @SWG\Response(
+     *     response=403,
+     *     description="Access denied"
+     * )
+     * @SWG\Parameter(
+     *     name="request",
+     *     in="body",
+     *     description="Data for the Character",
+     *     required=true,
+     *     @Model(type=App\Form\CharacterType::class)
+     * )
+     * @SWG\Tag(name="Character")
      */
 
     public function create(Request $request)
@@ -82,10 +143,38 @@ class CharacterController extends AbstractController
     }
 
     /**
+     * Modify character
+     *
      * @Route("/character/modify/{identifier}",
      *    name="character_modify",
      *    requirements={"identifier": "^([a-z0-9]{40}$)"},
      *    methods={"PUT", "HEAD"})
+     *
+     *
+     * @SWG\Response(
+     *     response=200,
+     *     description="Success",
+     * @Model(type=Character::class)
+     * )
+     * @SWG\Response(
+     *     response=403,
+     *     description="Access denied"
+     * )
+     * @SWG\Parameter(
+     *     name="request",
+     *     in="path",
+     *     description="Data for the Character",
+     *     required=true,
+     *    type="string"
+     * )
+     *      * @SWG\Parameter(
+     *     name="request",
+     *     in="body",
+     *     description="Data for the Character",
+     *     required=true,
+     *     @Model(type=App\Form\CharacterType::class)
+     * )
+     * @SWG\Tag(name="Character")
      */
     public function modify(Character $character, Request $request)
     {
@@ -95,10 +184,32 @@ class CharacterController extends AbstractController
     }
 
     /**
+     * Delete character
+     *
      * @Route("/character/delete/{identifier}",
      *    name="character_delete",
      *    requirements={"identifier": "^([a-z0-9]{40}$)"},
      *    methods={"DELETE", "HEAD"})
+     *
+     * @SWG\Response(
+     *     response=200,
+     *     description="Success",
+     *     @SWG\Schema(
+     *      @SWG\Property(property="delete", type="boolean")
+     *  )
+     * )
+     * @SWG\Response(
+     *     response=403,
+     *     description="Access denied"
+     * )
+     * @SWG\Parameter(
+     *     name="request",
+     *     in="path",
+     *     description="Data for the Character",
+     *     required=true,
+     *    type="string"
+     * )
+     * @SWG\Tag(name="Character")
      */
     public function delete(Character $character)
     {
