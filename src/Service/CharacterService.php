@@ -135,6 +135,7 @@ class CharacterService implements CharacterServiceInterface
             ->setIdentifier(hash('sha1', uniqid()))
             ->setCreation(new DateTime())
             ->setModification(new DateTime())
+
         ;
         $this->isEntityFilled($character);
 

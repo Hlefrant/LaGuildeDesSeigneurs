@@ -95,16 +95,14 @@ class CharacterHtmlController extends AbstractController
      * @Route("/character/modify/{identifier}.html",
      *     name="character_modify_html",
      *     requirements={"identifier": "^([a-z0-9]{40})$"},
-     *     methods={"GET", "PUT", "HEAD"}
+     *     methods={"GET", "POST", "HEAD"}
      * )
      */
     public function modify(Request $request, Character $character)
     {
         $this->denyAccessUnlessGranted('characterModify', $character);
 
-        $form = $this->createForm(CharacterHtmlType::class, $character, array(
-            'method' => 'PUT',
-        ));
+        $form = $this->createForm(CharacterHtmlType::class, $character);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $this->characterService->modifyFromHtml($character);

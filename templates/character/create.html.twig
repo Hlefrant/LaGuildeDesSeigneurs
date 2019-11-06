@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Character{% endblock %}
+{% block title %}Créer un nouveau personnage{% endblock %}
 
 {% block body %}
-    <h1>Create new Character</h1>
+<div class="d-flex p-5 flex-column align-items-center justify-content-center">
+    <div class="w-50">
+        <h1>Créer un nouveau personnage</h1>
 
-    {{ include('character/_form.html.twig') }}
+        {{ include('character/_form.html.twig') }}
 
-    <a href="{{ path('character_index_html') }}">back to list</a>
+        <a href="{{ path('character_index_html') }}">Retour à la liste</a>
+    </div>
+</div>
 {% endblock %}
