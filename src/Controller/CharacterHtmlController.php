@@ -43,7 +43,7 @@ class CharacterHtmlController extends AbstractController
      * Displays available Characters in html
      *
      * @Route("/character/intelligence/{intelligence}/index.html/",
-     *     name="character_index_html",
+     *     name="character_index_intelligence_html",
      *     methods={"GET", "HEAD"}
      * )
      */

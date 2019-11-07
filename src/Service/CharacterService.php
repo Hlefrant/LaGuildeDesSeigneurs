@@ -11,6 +11,8 @@ use LogicException;
 use App\Form\CharacterType;
 use DateTime;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use App\Event\CharacterEvent;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class CharacterService implements CharacterServiceInterface
 {
@@ -27,12 +29,14 @@ class CharacterService implements CharacterServiceInterface
         CharacterRepository $characterRepository,
         EntityManagerInterface $em,
         FormFactoryInterface $formFactory,
-        ValidatorInterface $validator
+        ValidatorInterface $validator,
+        EventDispatcherInterface $dispatcher
     ) {
         $this->characterRepository = $characterRepository;
         $this->em = $em;
         $this->formFactory = $formFactory;
         $this->validator = $validator;
+        $this->dispatcher = $dispatcher;
     }
 
 
@@ -119,6 +123,11 @@ class CharacterService implements CharacterServiceInterface
 
         ;
         $this->isEntityFilled($character);
+
+        //Dispatch event
+
+        $event = new CharacterEvent($character);
+        $this->dispatcher->dispatch($event, CharacterEvent::CHARACTER_CREATED);
 
         $this->em->persist($character);
         $this->em->flush();
